@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jwt
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+       format_sql: true
+  profiles:
+    include: jwt
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.springframework.security: debug
+
